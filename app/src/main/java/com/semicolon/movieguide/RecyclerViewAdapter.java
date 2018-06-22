@@ -3,18 +3,23 @@ package com.semicolon.movieguide;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import java.util.List;
-import java.util.zip.Inflater;
+import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     Context context;
-    List<Movie> data;
+    ArrayList<Movie> data;
+
+    public RecyclerViewAdapter(Context context, ArrayList<Movie> data) {
+        this.context = context;
+        this.data = data;
+    }
 
     @NonNull
     @Override
@@ -27,7 +32,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        Glide.with(context).load(data.get(position).getPosterURL()).into(holder.posterThumbnail);
     }
 
     @Override
