@@ -3,13 +3,15 @@ package com.semicolon.movieguide;
 public class Movie {
     private String title;
     private String posterURL;
+    private String backdropURL;
     private String synopsis;
     private float rating;
     private String releaseDate;
 
-    public Movie(String title, String posterURL, String synopsis, float rating, String releaseDate) {
+    public Movie(String title, String posterURL, String backdropURL, String synopsis, float rating, String releaseDate) {
         this.title = title;
         this.posterURL = posterURL;
+        this.backdropURL = backdropURL;
         this.synopsis = synopsis;
         this.rating = rating;
         this.releaseDate = releaseDate;
@@ -33,5 +35,13 @@ public class Movie {
 
     public String getReleaseDate() {
         return releaseDate;
+    }
+
+    public String getBackdropURL() {
+        return backdropURL;
+    }
+
+    public void setBackdropURL(String backdropURL) {
+        this.backdropURL = backdropURL;
     }
 }

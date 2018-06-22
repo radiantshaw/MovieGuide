@@ -26,25 +26,25 @@ public class MainActivity extends AppCompatActivity {
     private void setupExampleData() {
         data = new ArrayList<>();
 
-        data.add(new Movie("One", "https://dummyimage.com/400x600/000/fff&text=1", "First movie", 2.5F, "1/1/1"));
-        data.add(new Movie("Two", "https://dummyimage.com/400x600/000/fff&text=2", "Second movie", 4.3F, "2/2/2"));
-        data.add(new Movie("Three", "https://dummyimage.com/400x600/000/fff&text=3", "Third movie", 1.2F, "3/3/3"));
-        data.add(new Movie("Four", "https://dummyimage.com/400x600/000/fff&text=4", "Fourth movie", 3.6F, "4/4/4"));
-        data.add(new Movie("One", "https://dummyimage.com/400x600/000/fff&text=1", "First movie", 2.5F, "1/1/1"));
-        data.add(new Movie("Two", "https://dummyimage.com/400x600/000/fff&text=2", "Second movie", 4.3F, "2/2/2"));
-        data.add(new Movie("Three", "https://dummyimage.com/400x600/000/fff&text=3", "Third movie", 1.2F, "3/3/3"));
-        data.add(new Movie("Four", "https://dummyimage.com/400x600/000/fff&text=4", "Fourth movie", 3.6F, "4/4/4"));
-        data.add(new Movie("One", "https://dummyimage.com/400x600/000/fff&text=1", "First movie", 2.5F, "1/1/1"));
-        data.add(new Movie("Two", "https://dummyimage.com/400x600/000/fff&text=2", "Second movie", 4.3F, "2/2/2"));
-        data.add(new Movie("Three", "https://dummyimage.com/400x600/000/fff&text=3", "Third movie", 1.2F, "3/3/3"));
-        data.add(new Movie("Four", "https://dummyimage.com/400x600/000/fff&text=4", "Fourth movie", 3.6F, "4/4/4"));
-        data.add(new Movie("One", "https://dummyimage.com/400x600/000/fff&text=1", "First movie", 2.5F, "1/1/1"));
-        data.add(new Movie("Two", "https://dummyimage.com/400x600/000/fff&text=2", "Second movie", 4.3F, "2/2/2"));
-        data.add(new Movie("Three", "https://dummyimage.com/400x600/000/fff&text=3", "Third movie", 1.2F, "3/3/3"));
-        data.add(new Movie("Four", "https://dummyimage.com/400x600/000/fff&text=4", "Fourth movie", 3.6F, "4/4/4"));
-        data.add(new Movie("One", "https://dummyimage.com/400x600/000/fff&text=1", "First movie", 2.5F, "1/1/1"));
-        data.add(new Movie("Two", "https://dummyimage.com/400x600/000/fff&text=2", "Second movie", 4.3F, "2/2/2"));
-        data.add(new Movie("Three", "https://dummyimage.com/400x600/000/fff&text=3", "Third movie", 1.2F, "3/3/3"));
-        data.add(new Movie("Four", "https://dummyimage.com/400x600/000/fff&text=4", "Fourth movie", 3.6F, "4/4/4"));
+        data.add(new Movie("One", "https://dummyimage.com/400x600/000/fff&text=1", "https://dummyimage.com/600x400/000/fff&text=backdrop+1", "First movie", 2.5F, "1/1/1"));
+        data.add(new Movie("Two", "https://dummyimage.com/400x600/000/fff&text=2", "https://dummyimage.com/600x400/000/fff&text=backdrop+2", "Second movie", 4.3F, "2/2/2"));
+        data.add(new Movie("Three", "https://dummyimage.com/400x600/000/fff&text=3", "https://dummyimage.com/600x400/000/fff&text=backdrop+3", "Third movie", 1.2F, "3/3/3"));
+        data.add(new Movie("Four", "https://dummyimage.com/400x600/000/fff&text=4", "https://dummyimage.com/600x400/000/fff&text=backdrop+4", "Fourth movie", 3.6F, "4/4/4"));
+        data.add(new Movie("One", "https://dummyimage.com/400x600/000/fff&text=1", "https://dummyimage.com/600x400/000/fff&text=backdrop+1", "First movie", 2.5F, "1/1/1"));
+        data.add(new Movie("Two", "https://dummyimage.com/400x600/000/fff&text=2", "https://dummyimage.com/600x400/000/fff&text=backdrop+2", "Second movie", 4.3F, "2/2/2"));
+        data.add(new Movie("Three", "https://dummyimage.com/400x600/000/fff&text=3", "https://dummyimage.com/600x400/000/fff&text=backdrop+3", "Third movie", 1.2F, "3/3/3"));
+        data.add(new Movie("Four", "https://dummyimage.com/400x600/000/fff&text=4", "https://dummyimage.com/600x400/000/fff&text=backdrop+4", "Fourth movie", 3.6F, "4/4/4"));
+        data.add(new Movie("One", "https://dummyimage.com/400x600/000/fff&text=1", "https://dummyimage.com/600x400/000/fff&text=backdrop+1", "First movie", 2.5F, "1/1/1"));
+        data.add(new Movie("Two", "https://dummyimage.com/400x600/000/fff&text=2", "https://dummyimage.com/600x400/000/fff&text=backdrop+2", "Second movie", 4.3F, "2/2/2"));
+        data.add(new Movie("Three", "https://dummyimage.com/400x600/000/fff&text=3", "https://dummyimage.com/600x400/000/fff&text=backdrop+3", "Third movie", 1.2F, "3/3/3"));
+        data.add(new Movie("Four", "https://dummyimage.com/400x600/000/fff&text=4", "https://dummyimage.com/600x400/000/fff&text=backdrop+4", "Fourth movie", 3.6F, "4/4/4"));
+        data.add(new Movie("One", "https://dummyimage.com/400x600/000/fff&text=1", "https://dummyimage.com/600x400/000/fff&text=backdrop+1", "First movie", 2.5F, "1/1/1"));
+        data.add(new Movie("Two", "https://dummyimage.com/400x600/000/fff&text=2", "https://dummyimage.com/600x400/000/fff&text=backdrop+2", "Second movie", 4.3F, "2/2/2"));
+        data.add(new Movie("Three", "https://dummyimage.com/400x600/000/fff&text=3", "https://dummyimage.com/600x400/000/fff&text=backdrop+3", "Third movie", 1.2F, "3/3/3"));
+        data.add(new Movie("Four", "https://dummyimage.com/400x600/000/fff&text=4", "https://dummyimage.com/600x400/000/fff&text=backdrop+4", "Fourth movie", 3.6F, "4/4/4"));
+        data.add(new Movie("One", "https://dummyimage.com/400x600/000/fff&text=1", "https://dummyimage.com/600x400/000/fff&text=backdrop+1", "First movie", 2.5F, "1/1/1"));
+        data.add(new Movie("Two", "https://dummyimage.com/400x600/000/fff&text=2", "https://dummyimage.com/600x400/000/fff&text=backdrop+2", "Second movie", 4.3F, "2/2/2"));
+        data.add(new Movie("Three", "https://dummyimage.com/400x600/000/fff&text=3", "https://dummyimage.com/600x400/000/fff&text=backdrop+3", "Third movie", 1.2F, "3/3/3"));
+        data.add(new Movie("Four", "https://dummyimage.com/400x600/000/fff&text=4", "https://dummyimage.com/600x400/000/fff&text=backdrop+4", "Fourth movie", 3.6F, "4/4/4"));
     }
 }
