@@ -4,4 +4,12 @@
     <string name="synopsis">Synopsis:</string>
     <string name="rating">Rating:</string>
     <string name="release_date">Release Date:</string>
+    <string name="settings">Settings</string>
+    <string name="more_information">More Information</string>
+    <string name="pref_label_popular">Popular</string>
+    <string name="pref_label_highly_rated">Highly Rated</string>
+    <string name="pref_value_popular">popular</string>
+    <string name="pref_value_highly_rated">rating</string>
+    <string name="pref_choice">Choice</string>
+    <string name="pref_choice_key">choice</string>
 </resources>

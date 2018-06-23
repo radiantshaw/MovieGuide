@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pref_choice_labels">
+        <item>@string/pref_label_popular</item>
+        <item>@string/pref_label_highly_rated</item>
+    </array>
+    <array name="pref_choice_values">
+        <item>@string/pref_value_popular</item>
+        <item>@string/pref_value_highly_rated</item>
+    </array>
+</resources>
