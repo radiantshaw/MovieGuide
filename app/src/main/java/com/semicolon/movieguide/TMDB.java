@@ -4,20 +4,27 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.preference.PreferenceManager;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 
 public class TMDB {
     final private static String BASE_URL = "http://api.themoviedb.org/3/discover/movie";
+    final private static String THUMB_BASE_URL = "http://image.tmdb.org/t/p/w185";
+    final private static String BACKDROP_BASE_URL = "http://image.tmdb.org/t/p/w500";
     final private static String PARAM_SORT_BY = "sort_by";
     final private static String PARAM_API_KEY = "api_key";
     final private static String ARG_POPULARITY = "popularity.desc";
     final private static String ARG_RATING = "vote_average.desc";
     final private static String ARG_API_KEY = "";
+
+    public static String getThumbUrl() {
+        return THUMB_BASE_URL;
+    }
+
+    public static String getBackdropUrl() {
+        return BACKDROP_BASE_URL;
+    }
 
     private static Choice getChoiceFromPreferences(SharedPreferences preference, Context context) {
         Resources res = context.getResources();

@@ -20,7 +20,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public RecyclerViewAdapter(Context context, ArrayList<Movie> data) {
         this.context = context;
-        this.data = data;
+
+        if (data != null) {
+            this.data = data;
+        } else {
+            this.data = new ArrayList<>();
+        }
+
     }
 
     @NonNull
@@ -34,7 +40,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        Glide.with(context).load(data.get(position).getPosterURL()).into(holder.posterThumbnail);
+        Glide.with(context).load(TMDB.getThumbUrl() + data.get(position).getPosterURL()).into(holder.posterThumbnail);
 
         holder.posterCard.setOnClickListener(new View.OnClickListener() {
             @Override

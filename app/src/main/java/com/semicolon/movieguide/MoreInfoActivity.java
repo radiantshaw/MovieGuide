@@ -21,8 +21,8 @@ public class MoreInfoActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        Glide.with(this).load(intent.getExtras().getString("backdropURL")).into(backdrop);
-        Glide.with(this).load(intent.getExtras().getString("posterURL")).into(posterThumbnail);
+        Glide.with(this).load(TMDB.getBackdropUrl() + intent.getExtras().getString("backdropURL")).into(backdrop);
+        Glide.with(this).load(TMDB.getThumbUrl() + intent.getExtras().getString("posterURL")).into(posterThumbnail);
 
         title.setText(intent.getExtras().getString("title"));
         synopsis.setText(intent.getExtras().getString("synopsis"));
