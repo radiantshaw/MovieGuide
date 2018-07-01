@@ -40,19 +40,58 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        Glide.with(context).load(TMDB.getThumbUrl() + data.get(position).getPosterURL()).into(holder.posterThumbnail);
+        final Movie movie = data.get(position);
+
+        String posterURL = TMDB.getThumbUrl() + movie.getPosterURL();
+        if (!posterURL.endsWith(".jpg")) {
+            posterURL = "https://dummyimage.com/185x278/d6d6d6/2e2e2e&text=Image+not+available!";
+        }
+
+        Glide.with(context).load(posterURL).into(holder.posterThumbnail);
 
         holder.posterCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, MoreInfoActivity.class);
 
-                intent.putExtra("title", data.get(position).getTitle());
-                intent.putExtra("posterURL", data.get(position).getPosterURL());
-                intent.putExtra("backdropURL", data.get(position).getBackdropURL());
-                intent.putExtra("synopsis", data.get(position).getSynopsis());
-                intent.putExtra("rating", String.valueOf(data.get(position).getRating()));
-                intent.putExtra("releaseDate", data.get(position).getReleaseDate());
+                String notAvailable = "N/A";
+
+                String title = movie.getTitle();
+                if (title == null || title.equals("")) {
+                    title = notAvailable;
+                }
+
+                String posterURL = TMDB.getThumbUrl() + movie.getPosterURL();
+                if (!posterURL.endsWith(".jpg")) {
+                    posterURL = "https://dummyimage.com/185x278/d6d6d6/2e2e2e&text=Image+not+available!";
+                }
+
+                String backdropURL = TMDB.getBackdropUrl() + movie.getBackdropURL();
+                if (!backdropURL.endsWith(".jpg")) {
+                    backdropURL = "https://dummyimage.com/500x281/d6d6d6/2e2e2e&text=Image+not+available!";
+                }
+
+                String synopsis = movie.getSynopsis();
+                if (synopsis == null || synopsis.equals("")) {
+                    synopsis = notAvailable;
+                }
+
+                String rating = String.valueOf(movie.getRating());
+                if (rating.equals("")) {
+                    rating = notAvailable;
+                }
+
+                String releaseDate = movie.getReleaseDate();
+                if (releaseDate == null || releaseDate.equals("")) {
+                    releaseDate = notAvailable;
+                }
+
+                intent.putExtra("title", title);
+                intent.putExtra("posterURL", posterURL);
+                intent.putExtra("backdropURL", backdropURL);
+                intent.putExtra("synopsis", synopsis);
+                intent.putExtra("rating", rating);
+                intent.putExtra("releaseDate", releaseDate);
 
                 context.startActivity(intent);
             }
