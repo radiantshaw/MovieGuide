@@ -9,13 +9,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class TMDB {
-    final private static String BASE_URL = "http://api.themoviedb.org/3/discover/movie";
+    final private static String BASE_URL_POPULAR = "https://api.themoviedb.org/3/movie/popular";
+    final private static String BASE_URL_TOP_RATED = "https://api.themoviedb.org/3/movie/top_rated";
     final private static String THUMB_BASE_URL = "http://image.tmdb.org/t/p/w185";
     final private static String BACKDROP_BASE_URL = "http://image.tmdb.org/t/p/w500";
-    final private static String PARAM_SORT_BY = "sort_by";
     final private static String PARAM_API_KEY = "api_key";
-    final private static String ARG_POPULARITY = "popularity.desc";
-    final private static String ARG_RATING = "vote_average.desc";
     final private static String ARG_API_KEY = "";
 
     public static String getThumbUrl() {
@@ -49,9 +47,9 @@ public class TMDB {
         Uri builtUri = null;
 
         if (choice == Choice.POPULARITY) {
-            builtUri = Uri.parse(BASE_URL).buildUpon().appendQueryParameter(PARAM_SORT_BY, ARG_POPULARITY).appendQueryParameter(PARAM_API_KEY, ARG_API_KEY).build();
+            builtUri = Uri.parse(BASE_URL_POPULAR).buildUpon().appendQueryParameter(PARAM_API_KEY, ARG_API_KEY).build();
         } else if (choice == Choice.RATING) {
-            builtUri = Uri.parse(BASE_URL).buildUpon().appendQueryParameter(PARAM_SORT_BY, ARG_RATING).appendQueryParameter(PARAM_API_KEY, ARG_API_KEY).build();
+            builtUri = Uri.parse(BASE_URL_TOP_RATED).buildUpon().appendQueryParameter(PARAM_API_KEY, ARG_API_KEY).build();
         }
 
         URL builtUrl = null;
